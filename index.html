@@ -1,13 +1,38 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="UTF-8"> 
   <title>Laurio Portfolio</title>
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
 </head>
+<style>
+  body{
+    font-family: Georgia, 'Times New Roman', Times, serif, sans-serif;
+    background: linear-gradient(120deg, #a286e8, #d8a8ff, #acbcf4, #b0e0fb, #FFFF, #FFF, #FFF);
+  }
+  .button{
+  padding: 10px 17px;
+  font-size: 16px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #7d60be;
+  border: none;
+  border-radius: 9px;
+  box-shadow: 0 5px #d7d1d1;
+  }
+
+  .button:hover{
+    background-color: #85c1ff;
+  }
+</style>
 <body>
   <section class="w3-container">
-    <h1>Hello! welcome to Sav's Portfolio!</h1>
-    <h3>Some basic information about me: </h3>
+    <h1 style="font-family:georgia; text-align: center; color: #2f3b77
+
+"><b>Sav's Portfolio!</b></h1>
+    <h3 style="font-family:georgia;">Get to know me! </h3>
     <ul>
       <li>Birthday: Sep. 10, 2010</li>
       <li>Favorite subjects: Chem and Social Science
@@ -17,12 +42,16 @@
       <li>Fun fact about me: I have very big goals!</li>
       </li>
     </ul>
-    <h4><i>"Hard work beats talent when </i><i><b>talent does not work hard."</b></i></h4>
-   <h1>Link my works!</h1> 
+    <h4 style="font-family:georgia;"><i>"Hard work beats talent when </i><i><b>talent does not work hard."</b></i></h4>
+   <h2 style="font-family:georgia;"><i>Link to my works!</i></h2> 
    <nav>
-    <ul> 
-      <li><a href="./public/Q1_1stGraded.html"> First Exercise </a> </li>
-      <li><a href="./public/Q1_1stNgBeLaurio.html"> First Non-Graded Exercise </a> </li>
+    <ul>
+      <button class="button">
+       <a style="text-decoration: none" href="./public/Q1_1stGraded.html"> First Exercise </a>
+      </button>
+      <button class="button">
+      <a style="text-decoration: none" href="./public/Q1_1stNgBeLaurio.html"> First Non-Graded Exercise </a>
+      </button>
     </ul>
    </nav>
   </section>
