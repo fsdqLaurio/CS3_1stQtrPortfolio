@@ -1,20 +1,36 @@
+<html>
 <body>
     <h1>Feed me my snacks!</h1>
-<form>
+    
         <label for="age">Type your age:</label>
-        <input type="text" id="age" name="age"><br><br>
+        <input type= "text" id="age" name="Age"><br><br>
         
-        <label for="Maxage">Enter Max Age:</label>
+        <label for="maxage">Enter Max Age:</label>
         <input type="text" id="maxAge" name="maxAge"><br><br>
         
         <label for="numPerday">Enter number of snacks:</label>
         <input type="text" id="numPerDay" name="numPerDay"><br><br>
   
-<p>Result:</p>
-    <button>Accept Input</button>
+    <p ID="result"> Result:</p>
+    <button onclick="getData()">Accept Input</button> <!-- event handler/listener (onclick)-->
+<script>
+    function getData(){
+        let AGE = age.value;
+        let maxAGE = document.getElementById("maxAge").value;
+        let perDay = document.getElementById("numPerDay").value;
+        let sure = window.confirm(`Sure of your answer?`);
 
-</form>
+    if(sure){
+        let totalRequired = (Number(perDay)*365)*Number(maxAGE) - Number(AGE);
+        result.innerHTML = "Result: You will need " + totalRequired + " of your favorite to last you until the ripe old age of " + maxAGE;
+}
 
-<script src="script.js"> <!--I want to call on an external script-->
+    else{
+        window.alert(`Click again`);
+    }
+    
+    }
 </script>
+<!--- <script src="script.js"> --->
 </body>
+</html>
