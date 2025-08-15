@@ -4,26 +4,36 @@
 
     <h2> Q1 2nd Graded Exercise submitted by Sav of Beryllium</h2>
 
-    
-        <label for="price">Meal Price:</label>
-        <input type= "text" id="price" name="price"><br><br>
-        
+        <label>Meal Price:</label>
+            <input id="price"><br><br>
+
         <label for="tip">Tip:</label>
-        <input type="text" id="tip" name="tip"><br><br>
+            <input id="tip"><br><br>
         
         <label for="serviceCharge">Service Charge:</label>
-        <input type="text" id="serviceCharge" name="serviceCharge"><br><br>
+         <input id="serviceCharge"><br><br>
   
     <p ID="result"> Total Meal:</p>
-    <button onclick="totalMeal()">Accept Input</button> <!-- event handler/listener (onclick)-->
+    <button onclick="totalMeal()">Accept Input</button> 
 
     <script>
         function totalMeal() {
-              // place your JS code here
-            
+            let mp = document.getElementById("price").value;
+            let tip = document.getElementById("tip").value;
+            let sc = document.getElementById("serviceCharge").value;
+            let total = Number(mp) + Number(tip) + Number(sc/100 * mp);
+
+            result.innerHTML = "Total Meal: $" + total.toFixed(2);
          
         }
     </script>
 
 </body>
+
+<footer>
+    <p> References: </p>
+    <ul>
+        <li>W3Schools.com. (n.d.). <i>Javascript toFixed() method</i>. https://www.w3schools.com/jsref/jsref_tofixed.asp</li>
+    </ul>
+</footer>
 </html>
